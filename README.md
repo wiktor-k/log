@@ -47,7 +47,7 @@ The output of this tool will be a JSONL formatted list of work logs:
   "month": "2023-12",
   "hours": 4,
   "tag": "other",
-  "description": "Now parse the file with"
+  "description": "Yet another task"
 }
 ```
 

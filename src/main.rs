@@ -73,6 +73,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
 
         if let &NodeValue::Text(ref text) = &node.data.borrow().value {
+            if description.is_some() {
+                process(&mut date, &mut description, &tag, &mut hours);
+            }
+
             if let Some(captures) = hours_re.captures(text) {
                 hours += captures["hours"].parse::<i32>().unwrap();
             }
