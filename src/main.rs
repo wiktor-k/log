@@ -44,6 +44,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 #[derive(serde::Serialize)]
                 struct Record<'s> {
                     date: &'s String,
+                    month: &'s str,
                     hours: i32,
                     tag: &'s Option<String>,
                     description: &'s String,
@@ -53,6 +54,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     "{}",
                     serde_json::to_string(&Record {
                         date: date_s,
+                        month: &date_s[0..7],
                         hours: *hours,
                         tag,
                         description: description_s,
