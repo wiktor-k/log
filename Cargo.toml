@@ -1,0 +1,12 @@
+[package]
+name = "log"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+comrak = "0.20.0"
+regex = "1.10.2"
+serde = "1.0.193"
+serde_json = "1.0.108"
