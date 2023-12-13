@@ -35,10 +35,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut description: Option<String> = None;
     let mut tag: Option<String> = None;
 
-    let mut process = |mut date: &mut Option<String>,
-                       mut description: &mut Option<String>,
-                       tag: &Option<String>,
-                       hours: &mut i32| {
+    let process = |date: &mut Option<String>,
+                   description: &mut Option<String>,
+                   tag: &Option<String>,
+                   hours: &mut i32| {
         if *hours > 0 {
             if let (Some(date_s), Some(description_s)) = (date.as_ref(), description.as_ref()) {
                 #[derive(serde::Serialize)]
